@@ -56,6 +56,11 @@ public class AuthController {
     public String registerUser(Model model) {
         return "register";
     }
+    
+    @GetMapping("/web_sso_login")
+    public String ssoLogin(Model model) {
+        return "web_sso_login";
+    }
 
     @PostMapping("/register")
     @ResponseBody
