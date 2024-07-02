@@ -1,0 +1,39 @@
+server:
+  port: 8888
+logging:
+  level:
+    org.springframework.security: DEBUG
+spring:
+  jackson:
+    default-property-inclusion: NON_ABSENT
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+ # h2:
+ #   console:
+ #     enabled: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/webauthn_imprivata
+    username: root
+    password: Busin8ss
+    #url: jdbc:h2:mem:webauthndemodb
+  jpa:
+    hibernate:
+       ddl-auto: none   #used create  for 1st startup to create DDL for mysql then switched to none
+  #web:
+  #  resources:
+  #    static-locations: classpath:/META-INF/resources/webauthn
+authn:
+  hostname: localhost
+  display: Immprivata WebAuthN Sample Application
+  origin: http://localhost:8888
+#webauthn:
+#  relying-party-id: localhost
+#  relying-party-name: Example Application
+#  relying-party-icon: http://localhost:8888/assets/logo.png
+#  relying-party-origins: http://localhost:8888
+#  endpoints:
+#    registrationStartPath: /api/registration/start
+#    registrationAddPath: /api/registration/add
+#    registrationFinishPath: /api/registration/finish
+#    assertionStartPath: /api/assertion/start
+#    assertionFinishPath: /api/assertion/finish
